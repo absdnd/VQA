@@ -126,9 +126,9 @@ class VQADataset(torch.utils.data.Dataset):
 	ques_vocab = {}
 	ans_vocab = {}
 
-	def __init__(self, data_dir, img_dir, phase, img_scale=(256, 256), img_crop=224, raw_images=False):
+	def __init__(self, data_dir, qafile, img_dir, phase, img_scale=(256, 256), img_crop=224, raw_images=False):
 
-		qafile = '{}_small.pkl'.format(phase)
+		# qafile = '{}_small.pkl'.format(phase)
 		self.data_dir = data_dir
 		self.examples = pickle.load(open(os.path.join(data_dir, qafile), 'rb'))
 

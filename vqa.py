@@ -129,9 +129,10 @@ class QuesEmbedding(nn.Module):
         return ques_embedding
 
 
+####### VQAModel being decided here #############
 class VQAModel(nn.Module):
 
-    def __init__(self, vocab_size=10000, word_emb_size=300, emb_size=1024, output_size=1000, image_channel_type='I', ques_channel_type='lstm', use_mutan=True, mode='train', extract_img_features=True, features_dir=None):
+    def __init__(self, vocab_size=10000, word_emb_size=300, emb_size=1024, output_size=1000, image_channel_type='I', ques_channel_type='lstm', use_mutan=True, mode='train', extract_img_features=False, features_dir=None):
         super(VQAModel, self).__init__()
         self.mode = mode
         self.word_emb_size = word_emb_size
